@@ -1,5 +1,11 @@
 # Spotify-UI-Clone using ReactJS and Sass
 
+**TODO List**
+- [x] Sidebar
+- [x] Navbar
+- [ ] Home Display
+- [ ] Music Controls
+
 ## Available Scripts
 
 In the project directory, you can run:
