@@ -8,6 +8,12 @@
 - [x] Music Control Panel without the controls
 - [x] Styling 
 
+**Day-2 Checklist**
+- [x] Svg's forSidebar Component
+- [x] Populate Main Home Component with cards
+- [x] Cards hover state with Play Btn
+- [x] Multiple Cards (For Albums or Playlists)
+
 ## 🎨 Color Reference
 
 | Color         | Hex         | 
