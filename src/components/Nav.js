@@ -33,6 +33,9 @@ const Nav = () => {
       </ul>
       <div className='cookies'>
         <span>Cookies</span>
+        <span style={{ width: '15px', margin: 'auto' }}>
+          <hr></hr>
+        </span>
         <span>Privacy Policy</span>
       </div>
     </div>
