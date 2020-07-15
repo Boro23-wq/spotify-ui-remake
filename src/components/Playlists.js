@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as PlayIcon } from '../svgs/play.svg';
+import { Link } from 'react-router-dom';
 
 const Playlists = (props) => {
   const dataPlaylists = [
@@ -54,7 +55,7 @@ const Playlists = (props) => {
     {
       id: 107,
       category_id: 1,
-      name: 'Hiphop Bars Playlist III',
+      name: 'Hiphop Bars III',
       img:
         'https://images.unsplash.com/photo-1540430954598-91a1e2ad96c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
       desc: 'Roll up, its time to chill with hiphop vibes...',
@@ -62,7 +63,7 @@ const Playlists = (props) => {
     {
       id: 108,
       category_id: 1,
-      name: 'Hiphop Bars Playlist IV',
+      name: 'Hiphop Bars IV',
       img:
         'https://images.unsplash.com/photo-1461783436728-0a9217714694?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
       desc: 'Roll up, its time to chill with hiphop vibes...',
@@ -91,19 +92,24 @@ const Playlists = (props) => {
   );
   return (
     <div className='cardsWrapInner'>
-      {matchedPlaylists.map((playlist) => (
-        <div className='card'>
-          <div className='cardImage'>
-            <img src={playlist.img} alt='Image 1' />
+      {matchedPlaylists.map((playlist, id) => (
+        <Link
+          style={{ color: '#FFF', textDecoration: 'none' }}
+          to={`/playlist/` + playlist.id}
+        >
+          <div className='card' key={id}>
+            <div className='cardImage'>
+              <img src={playlist.img} alt='Image 1' />
+            </div>
+            <div className='cardContent'>
+              {' '}
+              <h3>{playlist.name}</h3> <span>{playlist.desc}</span>
+            </div>
+            <span className='playIcon'>
+              <PlayIcon />
+            </span>
           </div>
-          <div className='cardContent'>
-            {' '}
-            <h3>{playlist.name}</h3> <span>{playlist.desc}</span>
-          </div>
-          <span className='playIcon'>
-            <PlayIcon />
-          </span>
-        </div>
+        </Link>
       ))}
     </div>
   );

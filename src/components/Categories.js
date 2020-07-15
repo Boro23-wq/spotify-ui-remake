@@ -16,7 +16,7 @@ const Categories = () => {
     {
       id: 3,
       name: 'R&B',
-      tagline: 'Move like jaggers with Chris Brown\'s mixtape.',
+      tagline: "Move like jaggers with Chris Brown's mixtape.",
     },
     {
       id: 4,
@@ -26,9 +26,9 @@ const Categories = () => {
   ];
 
   return (
-    <div>
-      {dataCategories.map((category) => (
-        <div className='cardsWrap'>
+    <div className='mainInner'>
+      {dataCategories.map((category, id) => (
+        <div className='cardsWrap' key={id}>
           <h2>{category.name}</h2>
           {/* <span className='seeAll'> See All</span> */}
           <p className='subText'>{category.tagline}</p>
