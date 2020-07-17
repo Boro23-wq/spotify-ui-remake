@@ -10,6 +10,17 @@ $greenMain: #1db954;
   src: url(./fonts/CircularSpotifyTxT-Black.otf);
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+.smallText {
+  font-size: 0.75rem;
+  letter-spacing: 0.6px;
+  &.bold {
+    font-weight: 600;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -226,19 +237,62 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), #121212 40%);
     width: 100%;
     display: flex;
+    flex-direction: column;
   }
   .playlistPageInfo {
-    width: 300px;
+    // width: 300px;
     text-align: center;
     padding: 1.5rem;
+    display: flex;
     .playlistPageImage {
       width: 250px;
       height: 250px;
-      margin: auto;
       img {
         height: 100%;
         width: 100%;
         object-fit: cover;
+        -webkit-box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  .playlistPageContent {
+    text-align: left;
+    padding: 1.5rem 2rem;
+    h1 {
+      font-size: 7rem;
+      margin: 0;
+      line-height: 1;
+      word-spacing: 0px;
+      letter-spacing: -2px;
+    }
+    .tagline {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
+    }
+    .playlistPageDesc {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      p {
+        margin: 0;
+      }
+      span {
+        opacity: 0.7;
+        position: relative;
+        padding-left: 20px;
+        &:before {
+          content: '';
+          width: 4px;
+          height: 4px;
+          background: white;
+          overflow: hidden;
+          border-radius: 50%;
+          position: absolute;
+          margin-left: -10px;
+          top: 9px;
+        }
       }
     }
   }

@@ -13,16 +13,25 @@ const PlaylistPage = () => {
               alt='cover'
             />
           </div>
-          <h1>Title</h1>
-          <p>Spotify</p>
+          <div className='playlistPageContent'>
+            <p className='smallText uppercase bold'>Playlist</p>
+            <h1>Hiphop Beats</h1>
+            <p className='tagline'>
+              Minimalism, electronica and modern classical to concentrate to.
+            </p>
+            <div className='playlistPageDesc'>
+              <p className='spotify'>Spotify</p>
+              <span>699,428 likes</span>
+              <span>4 hr 35 min</span>
+            </div>
+          </div>
+        </div>
+        <div className='playlistPageSongs'>
           <button>Play</button>
           <div className='icons'>
             <div className='iconsHeart'></div>
             <div className='iconsDots'></div>
           </div>
-          <p>Minimalism, electronica and modern classical to concentrate to.</p>
-        </div>
-        <div className='playlistPageSongs'>
           <ul>
             <li>Song One</li>
             <li>Song Two</li>
