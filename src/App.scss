@@ -256,6 +256,40 @@ body {
       }
     }
   }
+  .playlistPageSongs {
+    height: 100%;
+    .playlistButtons {
+      display: flex;
+      align-items: center;
+    }
+    .playIcon {
+      @extend .playIcon;
+      opacity: 1;
+      position: relative;
+      //should be 0
+      margin-left: 20px;
+      height: 50px;
+      width: 50px;
+      right: 0;
+      bottom: 0;
+      svg {
+        height: 26px;
+        width: 26px;
+      }
+    }
+    .icons {
+      .icon {
+        margin-left: 1.5rem;
+      }
+      .iconsHeart {
+        width: 28px;
+        height: 28px;
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
   .playlistPageContent {
     text-align: left;
     padding: 1.5rem 2rem;
@@ -293,6 +327,53 @@ body {
           margin-left: -10px;
           top: 9px;
         }
+      }
+    }
+  }
+}
+
+ul.songList {
+  padding: 0;
+  li {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 0.8rem;
+    align-items: center;
+    transition: background 0.2s ease-in-out;
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      .songIcon {
+        .noteI {
+          display: none;
+        }
+        .playI {
+          display: block;
+        }
+      }
+    }
+    .songDetails {
+      h3 {
+        margin: 0;
+        font-size: 1rem;
+      }
+      span {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85em;
+      }
+    }
+    .songTime {
+      margin-left: auto;
+    }
+    .songIcon {
+      padding-right: 1rem;
+      .playI {
+        display: none;
+      }
+      svg {
+        fill: rgba(255, 255, 255, 0.5);
+        width: 15px;
+        height: 15px;
       }
     }
   }

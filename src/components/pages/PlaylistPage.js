@@ -1,5 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { ReactComponent as PlayIcon } from '../../svgs/play.svg';
+import { ReactComponent as HeartIcon } from '../../svgs/heart.svg';
+import { ReactComponent as NoteIcon } from '../../svgs/note.svg';
 
 const PlaylistPage = () => {
   let { id } = useParams();
@@ -27,17 +30,57 @@ const PlaylistPage = () => {
           </div>
         </div>
         <div className='playlistPageSongs'>
-          <button>Play</button>
-          <div className='icons'>
-            <div className='iconsHeart'></div>
-            <div className='iconsDots'></div>
+          <div className='playlistButtons'>
+            <span className='playIcon'>
+              <PlayIcon />
+            </span>
+            <div className='icons'>
+              <div className='icon iconsHeart'>
+                <HeartIcon />
+              </div>
+              <div className='icon iconsDots'></div>
+            </div>
           </div>
-          <ul>
-            <li>Song One</li>
-            <li>Song Two</li>
-            <li>Song Three</li>
-            <li>Song Four</li>
-            <li>Song Five</li>
+          <ul className='songList'>
+            <li>
+              <div className='songIcon'>
+                <NoteIcon className='noteI' />
+                <PlayIcon className='playI' />
+              </div>
+              <div className='songDetails'>
+                <h3>Crooked Smile</h3>
+                <span className='smallText'>J Cole</span>
+              </div>
+              <div className='songTime'>
+                <span>3:05</span>
+              </div>
+            </li>
+            <li>
+              <div className='songIcon'>
+                <NoteIcon className='noteI' />
+                <PlayIcon className='playI' />
+              </div>
+              <div className='songDetails'>
+                <h3>Middlechild</h3>
+                <span>J Cole</span>
+              </div>
+              <div className='songTime'>
+                <span>5:05</span>
+              </div>
+            </li>
+            <li>
+              <div className='songIcon'>
+                <NoteIcon className='noteI' />
+                <PlayIcon className='playI' />
+              </div>
+              <div className='songDetails'>
+                <h3>Love Yourz</h3>
+                <span>J Cole</span>
+              </div>
+              <div className='songTime'>
+                <span>2:19</span>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
